@@ -16,6 +16,7 @@ class Factory
 	{
 		Plugin.Description = 'Virtual financial exchange with limit order book matching and LLM participants.';
 		Plugin.RequiredRole = 'user';
+		Plugin.RequiredPlugins = [];
 
 		// Exchange is an entity-type plugin
 		Plugin.EntitySchema = {
