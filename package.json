@@ -1,0 +1,43 @@
+{
+	"name": "@mchiver/hive-plugin-exchange",
+	"version": "1.0.0",
+	"description": "Virtual financial exchange with limit order book matching and LLM participants for hive-harness.",
+	"license": "MIT",
+	"author": "Andre' G. Bowlin \u003cagbowlin@gmail.com\u003e",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mchiver/hive-plugin-exchange.git"
+	},
+	"keywords": [
+		"hive-harness",
+		"plugin",
+		"exchange",
+		"trading",
+		"simulation"
+	],
+	"main": "Exchange.factory.js",
+	"bin": {
+		"hive-exchange-tui": "./Tui/exchange.js"
+	},
+	"files": [
+		"Exchange.factory.js",
+		"Tools/",
+		"Tui/",
+		"Tests/",
+		"README.md"
+	],
+	"scripts": {
+		"test": "node --test --test-concurrency=1 --test-reporter=spec ./Tests/*.test.js",
+		"tui": "node Tui/exchange.js"
+	},
+	"devDependencies": {
+		"@mchiver/hive-harness": "file:../../hive-harness.git"
+	},
+	"peerDependencies": {
+		"@mchiver/hive-harness": ">=0.1.0"
+	},
+	"dependencies": {
+		"blessed": "^0.1.81",
+		"moniker": "^0.1.2"
+	}
+}
